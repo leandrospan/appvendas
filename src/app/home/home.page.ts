@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  public usu: string;
+  public sen: string;
+  public saida: string;
+
   constructor() {}
+
+  public mostra(): void {
+    this.saida = 'Usuário: ' + this.usu + 'Senha: ' + this.sen;
+  }
 
 }

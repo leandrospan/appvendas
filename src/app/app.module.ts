@@ -9,6 +9,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { LOCALE_ID } from '@angular/core';
+import { SQLite } from '@ionic-native/sqlite/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -16,6 +19,9 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     StatusBar,
     SplashScreen,
+    SQLite,
+    // Grande sacada para formatar numeros e datas no formato brasileiro
+    {provide: LOCALE_ID, useValue: 'pt-BR'},
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

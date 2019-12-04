@@ -1,19 +1,33 @@
 <ion-content>
-  <ion-grid>
+  <ion-grid class="ion-padding ion-align-items-center">
     <ion-row>
-      <ion-col><img src="../../assets/imagens/logoappvendas.png"></ion-col>
+      <ion-col><img src="../../assets/imagens/logoappvendas.png" witdh="130" height="140"></ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col></ion-col>
+    <ion-row class="ion-text-center">
+      <ion-col><ion-label>LOGIN</ion-label></ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col></ion-col>
-      <ion-col></ion-col>
+    <ion-row class="ion-text-center">
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Usuário</ion-label>
+          <ion-input type="text" [(ngModel)]="usu"></ion-input>
+        </ion-item>
+      </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col></ion-col>
-      <ion-col></ion-col>
+    <ion-row class="ion-text-center">
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input type="text" [(ngModel)]="sen"></ion-input>
+        </ion-item>
+      </ion-col>
     </ion-row>
+    <ion-row class="ion-text-center">
+      <ion-col><ion-button (click)="mostra()">MOSTRAR</ion-button></ion-col>
+    </ion-row>    
+    <ion-row class="ion-text-center" >
+      <ion-col *ngIf="saida"><ion-label>{{saida}}</ion-label></ion-col>
+    </ion-row>    
   </ion-grid>
-  <ion-label>Tela de Login</ion-label>
+  
 </ion-content>
