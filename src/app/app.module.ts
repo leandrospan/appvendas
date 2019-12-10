@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { LOCALE_ID } from '@angular/core';
 import { SQLite } from '@ionic-native/sqlite/ngx';
+import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { SQLite } from '@ionic-native/sqlite/ngx';
     StatusBar,
     SplashScreen,
     SQLite,
+    SQLitePorter,
     // Grande sacada para formatar numeros e datas no formato brasileiro
     {provide: LOCALE_ID, useValue: 'pt-BR'},
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
